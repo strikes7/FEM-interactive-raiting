@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Interactive raiting</title>
+  </head>
+  <body>
+    <div class="cards-wrapper">
+      <main class="raiting-card">
+        <img
+          src="images/icon-star.svg"
+          alt="star icon"
+          class="raiting-card__icon"
+        />
+        <h2 class="raiting-card__title">How did we do ?</h2>
+        <p class="raiting-card__paragraph">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <form name="raiting">
+          <fieldset role="radiogroup" class="raiting-stars__group">
+            <input
+              type="radio"
+              value="1"
+              name="raitingStar__input"
+              id="raiting-star__input--1"
+            />
+            <label class="raiting-star__label" for="raiting-star__input--1"
+              >1</label
+            >
+            <input
+              type="radio"
+              value="2"
+              name="raitingStar__input"
+              id="raiting-star__input--2"
+            />
+            <label class="raiting-star__label" for="raiting-star__input--2"
+              >2</label
+            >
+            <input
+              type="radio"
+              value="3"
+              name="raitingStar__input"
+              id="raiting-star__input--3"
+              checked
+            />
+            <label class="raiting-star__label" for="raiting-star__input--3"
+              >3</label
+            >
+            <input
+              type="radio"
+              value="4"
+              name="raitingStar__input"
+              id="raiting-star__input--4"
+            />
+            <label class="raiting-star__label" for="raiting-star__input--4"
+              >4</label
+            >
+            <input
+              type="radio"
+              value="5"
+              name="raitingStar__input"
+              id="raiting-star__input--5"
+            />
+            <label class="raiting-star__label" for="raiting-star__input--5"
+              >5</label
+            >
+          </fieldset>
+          <button type="button" id="raiting-star__submit">SUBMIT</button>
+        </form>
+      </main>
+      <section class="sended-message" id="js-messaje">
+        <img src="images/illustration-thank-you.svg" alt="" />
+        <p class="sended-message__raiting">
+          You selected <span id="js-raiting">0</span> out of 5 !
+        </p>
+        <h2 class="raiting-card__title">Thank you !</h2>
+        <p class="raiting-card__paragraph">
+          We appreciate you taking the time to give a rating. If you ever need
+          support, don't hesitate to get in touch!
+        </p>
+      </section>
+    </div>
+  </body>
+  <script src="js/script.js"></script>
+</html>

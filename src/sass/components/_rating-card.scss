@@ -1,0 +1,97 @@
+@use "../utilities/colors" as clr;
+@use "../mixins/partials" as *;
+.raiting-card {
+  @extend %cards;
+
+  &__icon {
+    block-size: 3rem;
+    inline-size: 3rem;
+    display: block;
+    object-fit: none;
+    border-radius: 100%;
+    background-color: clr.$neutral-400-semi;
+  }
+
+  &__title {
+    margin-block: 2rem 1.25rem;
+    color: clr.$neutral-100;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  &__paragraph {
+    color: clr.$neutral-400;
+
+    font-weight: 400;
+    line-height: 1.6;
+  }
+}
+
+#raiting-star__submit {
+  --bg-size-block: 0%;
+  line-height: 1;
+  border: 0;
+  padding-block: 0.8rem;
+  inline-size: 100%;
+  border-radius: 1.5em;
+  background-color: clr.$primary-orange;
+  color: clr.$neutral-100;
+  letter-spacing: 0.2ch;
+  font-weight: 400;
+  font-size: 1rem;
+  background-image: linear-gradient(clr.$neutral-100, clr.$neutral-100);
+  background-size: 100% var(--bg-size-block);
+  background-position: top;
+  background-repeat: no-repeat;
+  transition: background-size 0.25s, color 0.25s;
+}
+
+#raiting-star__submit:hover {
+  --bg-size-block: 100%;
+  color: clr.$primary-orange;
+}
+
+.raiting-stars__group {
+  margin-block: 1.6rem;
+  margin-inline: 0;
+  padding: 0;
+  isolation: isolate;
+  display: flex;
+  justify-content: space-between;
+  border: 0;
+}
+
+.raiting-star__label {
+  --bg-size-block: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  block-size: 3rem;
+  inline-size: 3rem;
+  border-radius: 100%;
+  line-height: 1;
+  color: clr.$neutral-400;
+  background-color: clr.$neutral-400-semi;
+  background-image: linear-gradient(clr.$neutral-300, clr.$neutral-300);
+  background-size: 100% var(--bg-size-block);
+  background-position: top;
+  background-repeat: no-repeat;
+  font-weight: 700;
+  transition: background-color 0.1s, background-size 0.25s, color 0.25s;
+
+  &:hover {
+    background-color: clr.$primary-orange;
+    color: clr.$neutral-100;
+  }
+}
+
+input[name="raitingStar__input"] {
+  appearance: none;
+  position: absolute;
+  inset-block-start: -10%;
+
+  &:checked + .raiting-star__label {
+    color: clr.$neutral-100;
+    --bg-size-block: 100%;
+  }
+}

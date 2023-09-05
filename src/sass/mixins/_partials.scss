@@ -1,0 +1,10 @@
+@use "../utilities/colors" as clr;
+
+%cards {
+  box-sizing: border-box;
+  inline-size: min(25.625rem, 90%);
+  padding: 2rem clamp(1rem, 7vw, 2rem);
+  border-radius: 1.5rem;
+  background-color: clr.$neutral-800;
+  font-size: 0.9375rem;
+}
